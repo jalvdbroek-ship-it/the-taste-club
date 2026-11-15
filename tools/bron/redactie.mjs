@@ -1,0 +1,26 @@
+// Redactionele velden per product (CONCEPT: de ondernemer bevestigt of past aan). Smaakwaarden 0..1 per as:
+// kruidig (0 fruitig .. 1 kruidig), vol (0 licht .. 1 vol), zoet (0 droog .. 1 zoet), complex (0 fris .. 1 complex).
+export const redactie = {
+  "bacardi-carta-blanca": { herkomst: "Cuba (oorsprong), nu vooral Puerto Rico", smaak: { kruidig: 0.15, vol: 0.2, zoet: 0.45, complex: 0.2 }, woorden: ["vanille", "licht", "fris"], momenten: ["long", "cocktail"],
+    verhaal: "Opgericht in 1862 in Santiago de Cuba. Een witte rum is licht van stijl en daarom geliefd in mojito en daiquiri." },
+  "ballantines-finest": { herkomst: "Schotland", smaak: { kruidig: 0.35, vol: 0.45, zoet: 0.4, complex: 0.4 }, woorden: ["honing", "malt", "zacht"], momenten: ["puur", "long"],
+    verhaal: "Een blended Scotch: whisky's van verschillende distilleerderijen, samengebracht tot een evenwichtige, zachte stijl." },
+  "beefeater-london-dry": { herkomst: "Engeland (Londen)", smaak: { kruidig: 0.75, vol: 0.45, zoet: 0.1, complex: 0.5 }, woorden: ["jeneverbes", "citrus", "droog"], momenten: ["long", "cocktail", "aperitief"],
+    verhaal: "London Dry betekent: droog van stijl, met jeneverbes als hoofdtoon. Een klassieke basis voor gin-tonic en negroni." },
+  "campari": { herkomst: "Italië", smaak: { kruidig: 0.7, vol: 0.6, zoet: 0.5, complex: 0.75 }, woorden: ["bitter", "sinaasappel", "kruiden"], momenten: ["aperitief", "cocktail"],
+    verhaal: "Een Italiaanse bitter uit 1860 met een herkenbare rode kleur. Bitterzoet, en de vaste basis van de negroni." },
+  "gordons-london-dry": { herkomst: "Engeland", smaak: { kruidig: 0.7, vol: 0.4, zoet: 0.1, complex: 0.35 }, woorden: ["jeneverbes", "limoen", "droog"], momenten: ["long", "cocktail"],
+    verhaal: "Een London Dry gin met een stijl die al sinds 1769 wordt gemaakt: helder, droog en jeneverbesgedreven." },
+  "havana-club-3": { herkomst: "Cuba", smaak: { kruidig: 0.25, vol: 0.35, zoet: 0.45, complex: 0.3 }, woorden: ["banaan", "vanille", "licht"], momenten: ["cocktail", "long"],
+    verhaal: "Een jonge Cubaanse rum van minimaal drie jaar rijping. Licht van stijl en geschikt voor mojito." },
+  "hennessy-vs": { herkomst: "Frankrijk (Cognac)", smaak: { kruidig: 0.35, vol: 0.7, zoet: 0.45, complex: 0.75 }, woorden: ["eik", "gedroogd fruit", "warm"], momenten: ["puur", "long"],
+    verhaal: "Cognac wordt twee keer gedistilleerd in koperen ketels en rijpt in eikenhouten vaten. VS betekent minimaal twee jaar rijping." },
+  "jb-rare": { herkomst: "Schotland", smaak: { kruidig: 0.25, vol: 0.3, zoet: 0.35, complex: 0.25 }, woorden: ["licht", "graan", "fris"], momenten: ["long", "puur"],
+    verhaal: "Een lichte blended Scotch: toegankelijk van stijl en daarom een goede eerste stap in whisky." },
+  "johnnie-walker-black-label": { herkomst: "Schotland", smaak: { kruidig: 0.65, vol: 0.75, zoet: 0.35, complex: 0.85 }, woorden: ["rook", "donker fruit", "kruiden"], momenten: ["puur"],
+    verhaal: "Een blended Scotch van whisky's die minimaal twaalf jaar rijpten. Volle stijl met een vleugje rook." },
+  "martini-bianco": { herkomst: "Italië (Turijn)", smaak: { kruidig: 0.2, vol: 0.25, zoet: 0.8, complex: 0.3 }, woorden: ["vanille", "bloemen", "zacht"], momenten: ["aperitief", "long"],
+    verhaal: "Vermouth is wijn die is versterkt en op smaak gebracht met kruiden. Bianco is wit en zacht van stijl." },
+  "smirnoff-vodka": { herkomst: "Rusland (oorsprong), vandaag op meerdere plekken gemaakt", smaak: { kruidig: 0.1, vol: 0.25, zoet: 0.1, complex: 0.1 }, woorden: ["neutraal", "schoon", "droog"], momenten: ["long", "cocktail"],
+    verhaal: "Drievoudig gedistilleerd en gefilterd, met een neutrale smaak. Daardoor een veelgebruikte basis voor mixdrankjes." },
+};

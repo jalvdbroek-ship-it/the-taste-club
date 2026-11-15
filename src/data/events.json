@@ -1,0 +1,17 @@
+{
+  "voorbeeld": true,
+  "toelichting": "Er zijn nog geen evenementen bevestigd door De Gouden Kurk. Dit bestand bevat alleen een gemarkeerd voorbeeld dat nergens als echt evenement wordt getoond.",
+  "items": [
+    {
+      "id": "voorbeeld-proeverij",
+      "titel": "Voorbeeld: kleine proeverij aan de toonbank",
+      "soort": "proeverij",
+      "tekst": "Zo zou een bevestigde proeverij eruitzien. Datum, tijd, plaatsen en inhoud volgen zodra de ondernemer ze vaststelt.",
+      "datum": null,
+      "tijd": null,
+      "plaatsen": 0,
+      "bevestigd": false,
+      "demo": true
+    }
+  ]
+}

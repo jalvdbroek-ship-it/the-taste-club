@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#2a0d10">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="THE TASTE CLUB by De Gouden Kurk, slijterij in Rozenburg. Ontdek je smaak, kies een cadeau en houd je eigen collectie bij. Alleen 18+. Demo.">
+  <title>THE TASTE CLUB · De Gouden Kurk (demo)</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="public/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="public/icons/icon-192.png">
+  <link rel="preload" href="public/fonts/bodoni-moda-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="public/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="public/css/tokens.css">
+  <link rel="stylesheet" href="public/css/base.css">
+  <link rel="stylesheet" href="public/css/components.css">
+  <link rel="stylesheet" href="public/css/screens.css">
+  <link rel="stylesheet" href="public/css/motion.css">
+</head>
+<body>
+  <a class="skip" href="#view">Naar de inhoud</a>
+  <header class="topbar" id="topbar"></header>
+  <main id="view" tabindex="-1"></main>
+  <footer class="foot" id="foot"></footer>
+  <nav class="nav" id="nav" aria-label="Hoofdmenu"></nav>
+  <noscript><p>Deze app heeft JavaScript nodig. Alleen voor 18+.</p></noscript>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

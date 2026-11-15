@@ -1,0 +1,29 @@
+{
+  "naam": "THE TASTE CLUB",
+  "merk": "De Gouden Kurk",
+  "versie": "0.1.0",
+  "demo": true,
+  "prijzenBevestigd": false,
+  "voorraadGekoppeld": false,
+  "verpakking": false,
+  "intro": true,
+  "winkel": {
+    "naam": "De Gouden Kurk",
+    "straat": "Raadhuisplein 6",
+    "postcode": "3181 CG",
+    "plaats": "Rozenburg",
+    "telefoon": "06 44999844",
+    "telefoonLink": "tel:+31644999844",
+    "openingstijden": null
+  },
+  "beheer": {
+    "pincode": "1234",
+    "label": "Demo-toegang. Dit is geen echte beveiliging: de pincode staat leesbaar in dit bestand.",
+    "toegestaanOpElkeHost": false
+  },
+  "limieten": {
+    "afbeeldingKB": 400,
+    "notitieTekens": 600,
+    "boodschapTekens": 240
+  }
+}

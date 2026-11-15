@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">De Gouden Kurk</title><rect width="64" height="64" rx="14" fill="#120d0c"/><g color="#d4b072" transform="translate(4 4) scale(.875)"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="32" cy="32" r="29" stroke-width="1.6"/>
+        <circle cx="32" cy="32" r="25.5" stroke-width=".8" opacity=".55"/>
+        <g transform="rotate(-24 32 32)" stroke-width="1.6">
+          <path d="M20.5 19.6c0-1.8 1.4-3.1 3.2-3.1h16.6c1.8 0 3.2 1.3 3.2 3.1v1.6c0 1-.8 1.8-1.8 1.8H22.3c-1 0-1.8-.8-1.8-1.8z" fill="currentColor" fill-opacity=".22"/>
+          <path d="M26.2 23v21.6c0 1.6 1.3 2.9 2.9 2.9h5.8c1.6 0 2.9-1.3 2.9-2.9V23"/>
+          <path d="M29.3 28.5v14.5M34.7 28.5v14.5" stroke-width=".9" opacity=".6"/>
+        </g>
+        <path d="M46.5 14.5v5M44 17h5M17 45.5v3.6M15.2 47.3h3.6" stroke-width="1.1" opacity=".8"/>
+      </g></g></svg>

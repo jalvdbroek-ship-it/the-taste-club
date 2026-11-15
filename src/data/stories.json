@@ -1,0 +1,19 @@
+{
+  "toelichting": "Redactionele weetjes (concept). De ondernemer keurt ze goed voor ze als winkelnieuws gelden.",
+  "items": [
+    { "id": "scotch-drie-jaar", "titel": "Drie jaar eik: het minimum voor Scotch", "soort": "weetje", "status": "gepubliceerd", "bron": "concept",
+      "tekst": "Scotch whisky mag die naam alleen dragen als hij minstens drie jaar in eikenhouten vaten heeft gerijpt. Dat is het minimum. Veel flessen op de plank hebben veel langer gelegen. Staat er een leeftijd op het etiket, dan is dat de jongste whisky in de fles.", "producten": ["ballantines-finest", "jb-rare", "johnnie-walker-black-label"] },
+    { "id": "standaardglas", "titel": "Een standaardglas is kleiner dan je denkt", "soort": "weetje", "status": "gepubliceerd", "bron": "concept",
+      "tekst": "Een standaardglas sterke drank is 35 ml. Dat is ongeveer een vingerhoed en past bij de manier waarop deze dranken bedoeld zijn: klein, rustig en met aandacht. Proeven is iets anders dan opdrinken.", "producten": [] },
+    { "id": "london-dry", "titel": "Wat betekent London Dry?", "soort": "uitleg", "status": "gepubliceerd", "bron": "concept",
+      "tekst": "London Dry zegt niets over Londen, maar over de stijl: droog, met jeneverbes als hoofdtoon en zonder zoetstof of kleurstof na het distilleren. Het is de reden dat gins als deze zo goed samengaan met tonic.", "producten": ["beefeater-london-dry", "gordons-london-dry"] },
+    { "id": "cognac-twee-keer", "titel": "Cognac wordt twee keer gedistilleerd", "soort": "weetje", "status": "gepubliceerd", "bron": "concept",
+      "tekst": "Cognac komt uit de streek rond de Franse stad Cognac en wordt twee keer gedistilleerd in koperen ketels. Daarna rijpt hij in eikenhout. VS staat voor Very Special: minimaal twee jaar rijping.", "producten": ["hennessy-vs"] },
+    { "id": "vermouth-wijn", "titel": "Vermouth is eigenlijk wijn", "soort": "weetje", "status": "gepubliceerd", "bron": "concept",
+      "tekst": "Vermouth is wijn die is versterkt met alcohol en op smaak gebracht met kruiden en planten. Daarom hoort een geopende fles in de koelkast en niet jarenlang op de plank.", "producten": ["martini-bianco"] },
+    { "id": "bitter-aperitief", "titel": "Waarom een aperitief bitter is", "soort": "uitleg", "status": "gepubliceerd", "bron": "concept",
+      "tekst": "Bitterstoffen maken de smaakpapillen wakker. Daarom zijn aperitieven vaak bitter of droog: ze bereiden de smaak voor op eten. Campari is daar het bekendste voorbeeld van.", "producten": ["campari"] },
+    { "id": "winkelnieuws-voorbeeld", "titel": "Winkelnieuws volgt", "soort": "nieuws", "status": "concept", "bron": "concept",
+      "tekst": "Zodra De Gouden Kurk nieuws bevestigt, verschijnt het hier. Tot die tijd: loop binnen of bel 06 44999844.", "producten": [] }
+  ]
+}

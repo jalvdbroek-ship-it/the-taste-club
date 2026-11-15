@@ -1,0 +1,21 @@
+// Screenshot van een route: node tools/shot.mjs <route> [breedte] [hoogte] [bestand] [--full] [--intro]
+import { mkdirSync } from "node:fs";
+import { loadPlaywright } from "./browser.mjs";
+const [route = "", w = "390", h = "844", out = "docs/screenshots/tmp/shot.png"] = process.argv.slice(2).filter((a) => !a.startsWith("--"));
+const BASE = process.env.BASE || "http://localhost:4300/";
+mkdirSync("docs/screenshots/tmp", { recursive: true });
+const { chromium } = await loadPlaywright();
+const b = await chromium.launch();
+const page = await (await b.newContext({ viewport: { width: +w, height: +h }, deviceScaleFactor: 2, bypassCSP: true })).newPage();
+const errors = [];
+page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
+page.on("pageerror", (e) => errors.push(String(e)));
+if (!process.argv.includes("--intro")) await page.addInitScript(() => { sessionStorage.setItem("tc.leeftijd18", "ja"); sessionStorage.setItem("tc.intro", "1"); });
+await page.goto(`${BASE}#/${route}`);
+await page.waitForSelector("#view h1, .gate", { timeout: 8000 });
+await page.waitForTimeout(1800);
+if (process.argv.includes("--full")) await page.addStyleTag({ content: ".scroll-in, .parallax img { animation: none !important; }" });
+await page.waitForTimeout(500);
+await page.screenshot({ path: out, fullPage: process.argv.includes("--full") });
+console.log(out, errors.length ? "FOUTEN:\n" + errors.join("\n") : "geen consolefouten");
+await b.close();

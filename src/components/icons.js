@@ -1,0 +1,33 @@
+// Eigen lijn-iconenset (24x24, 1.5 px). Kleur en lijndikte komen uit de CSS.
+import { raw } from "../lib/dom.js";
+const P = {
+  club: '<circle cx="12" cy="12" r="9"/><path d="M9.5 8.5h5l-.6 8.5h-3.8z"/><path d="M10 8.5V7h4v1.5"/><path d="M17.5 5v2.5M16.3 6.2h2.4"/>',
+  smaak: '<path d="M7 3h10l-1 7a4 4 0 0 1-8 0z"/><path d="M12 14v6M8.5 20h7"/><path d="M8.2 7.5h7.6"/>',
+  cadeau: '<rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M3 9h18v-2.5H3zM12 6.5V20M12 6.5c-1.5-3-5-3-5-1s3 1 5 1zm0 0c1.5-3 5-3 5-1s-3 1-5 1z"/>',
+  collectie: '<path d="M6 4h12v16l-6-4-6 4z"/><path d="M9.5 9h5"/>',
+  meer: '<circle cx="5.5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="18.5" cy="12" r="1.3"/>',
+  heart: '<path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.2 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/>',
+  bookmark: '<path d="M6 4h12v16l-6-4-6 4z"/>',
+  share: '<path d="M12 15V4M8 8l4-4 4 4M5 13v6h14v-6"/>',
+  phone: '<path d="M6.5 4h3l1.5 4-2 1.2a10 10 0 0 0 5.8 5.8L16 13l4 1.5v3a2 2 0 0 1-2 2A14 14 0 0 1 4.5 6a2 2 0 0 1 2-2z"/>',
+  arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+  back: '<path d="M19 12H5M11 6l-6 6 6 6"/>',
+  close: '<path d="m6 6 12 12M18 6 6 18"/>',
+  search: '<circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  trash: '<path d="M5 7h14M10 7V4h4v3M7 7l1 13h8l1-13M10 11v6M14 11v6"/>',
+  info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/>',
+  compare: '<rect x="3.5" y="5" width="7" height="14" rx="1.5"/><rect x="13.5" y="5" width="7" height="14" rx="1.5"/>',
+  check: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
+  down: '<path d="M12 4v11M7.5 11 12 15.5 16.5 11M5 19h14"/>',
+  up: '<path d="M12 16V5M7.5 9 12 4.5 16.5 9M5 19h14"/>',
+  note: '<path d="M5 4h14v16H5zM8.5 9h7M8.5 13h7M8.5 17h4"/>',
+  calendar: '<rect x="4" y="5.5" width="16" height="14.5" rx="1.5"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/>',
+  pin: '<path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>',
+  star: '<path d="m12 4 2.3 5 5.2.6-3.9 3.6 1.1 5.3L12 15.8 7.3 18.5l1.1-5.3L4.5 9.6l5.2-.6z"/>',
+  lock: '<rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/>',
+  edit: '<path d="M5 19l1-4L16.5 4.5a2 2 0 0 1 3 3L9 18z"/>',
+  book: '<path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H19v15H7.5A2.5 2.5 0 0 0 5 20.5zM5 20.5V5.5"/>',
+  sparkle: '<path d="M12 4c.6 4 1.9 5.4 6 6-4.1.6-5.4 2-6 6-.6-4-1.9-5.4-6-6 4.1-.6 5.4-2 6-6z"/><path d="M18.5 16v3M17 17.5h3"/>',
+};
+export const icon = (name, label = "") => raw(`<svg viewBox="0 0 24 24" ${label ? `role="img" aria-label="${label}"` : 'aria-hidden="true" focusable="false"'}>${P[name] || ""}</svg>`);

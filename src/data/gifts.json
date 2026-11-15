@@ -1,0 +1,38 @@
+{
+  "voor": [
+    { "id": "partner", "label": "Mijn partner" },
+    { "id": "vriend", "label": "Een vriend of vriendin" },
+    { "id": "collega", "label": "Een collega" },
+    { "id": "familie", "label": "Familie" },
+    { "id": "gastheer", "label": "Gastheer of gastvrouw" }
+  ],
+  "gelegenheden": [
+    { "id": "verjaardag", "label": "Verjaardag" },
+    { "id": "bedankt", "label": "Een bedankje" },
+    { "id": "jubileum", "label": "Jubileum of afscheid" },
+    { "id": "feestdagen", "label": "Feestdagen" },
+    { "id": "nieuw-huis", "label": "Nieuw huis" }
+  ],
+  "stijlen": [
+    { "id": "klassiek", "label": "Klassiek" },
+    { "id": "ontdekken", "label": "Iets om te ontdekken" },
+    { "id": "aperitief", "label": "Voor bij het aperitief" },
+    { "id": "puur", "label": "Rustig puur proeven" }
+  ],
+  "ideeen": [
+    { "id": "g1", "titel": "De vertrouwde whisky", "tekst": "Een blended Scotch die niemand tegenvalt. Een veilige keuze voor wie je smaak nog niet kent.", "voor": ["collega", "familie", "gastheer", "vriend"], "gelegenheid": ["bedankt", "verjaardag", "feestdagen", "nieuw-huis"], "stijl": ["klassiek", "puur"], "producten": ["ballantines-finest"] },
+    { "id": "g2", "titel": "Voor wie van whisky houdt", "tekst": "Een vollere blend met rook en donker fruit, voor iemand die al weet wat hij lekker vindt.", "voor": ["partner", "vriend", "familie"], "gelegenheid": ["verjaardag", "jubileum", "feestdagen"], "stijl": ["puur", "klassiek"], "producten": ["johnnie-walker-black-label"] },
+    { "id": "g3", "titel": "Cognac voor een bijzonder moment", "tekst": "Warm, rond en met eik. Een fles die past bij een jubileum, een afscheid of een afsluiting van het jaar.", "voor": ["partner", "familie", "collega"], "gelegenheid": ["jubileum", "feestdagen", "verjaardag"], "stijl": ["klassiek", "puur"], "producten": ["hennessy-vs"] },
+    { "id": "g4", "titel": "Gin voor de gin-tonicliefhebber", "tekst": "Een droge London Dry met jeneverbes. Combineer met een goede tonic en een citrusvrucht.", "voor": ["vriend", "partner", "gastheer", "collega"], "gelegenheid": ["verjaardag", "nieuw-huis", "bedankt"], "stijl": ["aperitief", "klassiek"], "producten": ["beefeater-london-dry"] },
+    { "id": "g5", "titel": "Een aperitiefset voor twee", "tekst": "Campari en witte vermouth: twee flessen waarmee je een aperitief opbouwt, van bitter tot zacht.", "voor": ["partner", "gastheer", "vriend"], "gelegenheid": ["nieuw-huis", "bedankt", "verjaardag"], "stijl": ["aperitief", "ontdekken"], "producten": ["campari", "martini-bianco"] },
+    { "id": "g6", "titel": "Rum om mee te mixen", "tekst": "Een lichte witte rum en een jonge Cubaanse rum: twee stijlen om naast elkaar te proeven.", "voor": ["vriend", "partner", "collega"], "gelegenheid": ["verjaardag", "nieuw-huis"], "stijl": ["ontdekken", "aperitief"], "producten": ["bacardi-carta-blanca", "havana-club-3"] },
+    { "id": "g7", "titel": "Twee gins naast elkaar", "tekst": "Twee klassieke London Dry-gins om te vergelijken: waar verschillen ze, en welke past bij jou?", "voor": ["vriend", "partner", "gastheer"], "gelegenheid": ["verjaardag", "bedankt", "feestdagen"], "stijl": ["ontdekken", "klassiek"], "producten": ["beefeater-london-dry", "gordons-london-dry"] },
+    { "id": "g8", "titel": "Lichte whisky om mee te beginnen", "tekst": "Een toegankelijke blend voor wie voor het eerst whisky wil proeven.", "voor": ["vriend", "familie", "collega"], "gelegenheid": ["bedankt", "verjaardag"], "stijl": ["ontdekken", "klassiek"], "producten": ["jb-rare"] }
+  ],
+  "boodschappen": [
+    "Bedankt voor alles. Op jou, rustig en met een goed glas.",
+    "Gefeliciteerd. Een fles om samen te ontdekken.",
+    "Voor een mooie nieuwe plek. Proost op wat komt.",
+    "Met dank, en met een kleine verrassing."
+  ]
+}

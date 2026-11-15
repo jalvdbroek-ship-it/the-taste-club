@@ -1,0 +1,497 @@
+{
+  "voorbeeldassortiment": true,
+  "categorieen": [
+    {
+      "id": "whisky",
+      "label": "Whisky"
+    },
+    {
+      "id": "cognac",
+      "label": "Cognac"
+    },
+    {
+      "id": "gin",
+      "label": "Gin"
+    },
+    {
+      "id": "rum",
+      "label": "Rum"
+    },
+    {
+      "id": "wodka",
+      "label": "Wodka"
+    },
+    {
+      "id": "likeuren",
+      "label": "Likeuren"
+    },
+    {
+      "id": "vermouth",
+      "label": "Vermouth"
+    }
+  ],
+  "producten": [
+    {
+      "id": "bacardi-carta-blanca",
+      "naam": "Bacardi Carta Blanca",
+      "stijl": "Witte rum",
+      "categorie": "rum",
+      "categorieLabel": "Rum",
+      "inhoud": "70 cl",
+      "alcohol": "37,5%",
+      "afbeelding": "public/img/producten/bacardi-carta-blanca.webp",
+      "afbeeldingAlt": "Fles Bacardi Carta Blanca",
+      "breedte": 249,
+      "hoogte": 900,
+      "herkomst": "Cuba (oorsprong), nu vooral Puerto Rico",
+      "smaak": {
+        "kruidig": 0.15,
+        "vol": 0.2,
+        "zoet": 0.45,
+        "complex": 0.2
+      },
+      "smaakwoorden": [
+        "vanille",
+        "licht",
+        "fris"
+      ],
+      "momenten": [
+        "long",
+        "cocktail"
+      ],
+      "verhaal": "Opgericht in 1862 in Santiago de Cuba. Een witte rum is licht van stijl en daarom geliefd in mojito en daiquiri.",
+      "serveer": "In een mojito of daiquiri, of lang met cola en limoen.",
+      "prijs": null,
+      "voorraad": null,
+      "bron": "concept",
+      "credit": {
+        "title": "Bacardi (on white)",
+        "creator": "Miika Silfverberg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bacardi_(on_white).jpg",
+        "changes": "achtergrond verwijderd en bijgesneden"
+      }
+    },
+    {
+      "id": "ballantines-finest",
+      "naam": "Ballantine's Finest",
+      "stijl": "Blended Scotch whisky",
+      "categorie": "whisky",
+      "categorieLabel": "Whisky",
+      "inhoud": "70 cl",
+      "alcohol": "40%",
+      "afbeelding": "public/img/producten/ballantines-finest.webp",
+      "afbeeldingAlt": "Fles Ballantine's Finest",
+      "breedte": 341,
+      "hoogte": 900,
+      "herkomst": "Schotland",
+      "smaak": {
+        "kruidig": 0.35,
+        "vol": 0.45,
+        "zoet": 0.4,
+        "complex": 0.4
+      },
+      "smaakwoorden": [
+        "honing",
+        "malt",
+        "zacht"
+      ],
+      "momenten": [
+        "puur",
+        "long"
+      ],
+      "verhaal": "Een blended Scotch: whisky's van verschillende distilleerderijen, samengebracht tot een evenwichtige, zachte stijl.",
+      "serveer": "Op ijs, of lang met ginger ale.",
+      "prijs": null,
+      "voorraad": null,
+      "bron": "concept",
+      "credit": {
+        "title": "2017 Ballantine's Finest",
+        "creator": "Jacek Halicki",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2017_Ballantine's_Finest.jpg",
+        "changes": "achtergrond verwijderd en bijgesneden"
+      }
+    },
+    {
+      "id": "beefeater-london-dry",
+      "naam": "Beefeater London Dry Gin",
+      "stijl": "Classic London Dry",
+      "categorie": "gin",
+      "categorieLabel": "Gin",
+      "inhoud": "70 cl",
+      "alcohol": "40%",
+      "afbeelding": "public/img/producten/beefeater-london-dry.webp",
+      "afbeeldingAlt": "Fles Beefeater London Dry Gin",
+      "breedte": 116,
+      "hoogte": 400,
+      "herkomst": "Engeland (Londen)",
+      "smaak": {
+        "kruidig": 0.75,
+        "vol": 0.45,
+        "zoet": 0.1,
+        "complex": 0.5
+      },
+      "smaakwoorden": [
+        "jeneverbes",
+        "citrus",
+        "droog"
+      ],
+      "momenten": [
+        "long",
+        "cocktail",
+        "aperitief"
+      ],
+      "verhaal": "London Dry betekent: droog van stijl, met jeneverbes als hoofdtoon. Een klassieke basis voor gin-tonic en negroni.",
+      "serveer": "Met tonic en een schijf citroen, of in een negroni.",
+      "prijs": null,
+      "voorraad": null,
+      "bron": "concept",
+      "credit": {
+        "title": "Beefeater London Dry Gin",
+        "creator": "Open Food Facts / product photo contributors",
+        "license": "CC BY-SA",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourceUrl": "https://world.openfoodfacts.org/product/5000299605042",
+        "changes": "achtergrond verwijderd en bijgesneden"
+      }
+    },
+    {
+      "id": "campari",
+      "naam": "Campari",
+      "stijl": "Italiaanse bitter",
+      "categorie": "likeuren",
+      "categorieLabel": "Likeuren",
+      "inhoud": "70 cl",
+      "alcohol": "25%",
+      "afbeelding": "public/img/producten/campari.webp",
+      "afbeeldingAlt": "Fles Campari",
+      "breedte": 223,
+      "hoogte": 900,
+      "herkomst": "Italië",
+      "smaak": {
+        "kruidig": 0.7,
+        "vol": 0.6,
+        "zoet": 0.5,
+        "complex": 0.75
+      },
+      "smaakwoorden": [
+        "bitter",
+        "sinaasappel",
+        "kruiden"
+      ],
+      "momenten": [
+        "aperitief",
+        "cocktail"
+      ],
+      "verhaal": "Een Italiaanse bitter uit 1860 met een herkenbare rode kleur. Bitterzoet, en de vaste basis van de negroni.",
+      "serveer": "Met sodawater en sinaasappel, of in een negroni.",
+      "prijs": null,
+      "voorraad": null,
+      "bron": "concept",
+      "credit": {
+        "title": "Bottle of Campari",
+        "creator": "Kenneth C. Zirkel",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bottle_of_Campari_(United_States).jpg",
+        "changes": "achtergrond verwijderd en bijgesneden"
+      }
+    },
+    {
+      "id": "gordons-london-dry",
+      "naam": "Gordon's London Dry Gin",
+      "stijl": "Distilled London Dry",
+      "categorie": "gin",
+      "categorieLabel": "Gin",
+      "inhoud": "70 cl",
+      "alcohol": "37,5%",
+      "afbeelding": "public/img/producten/gordons-london-dry.webp",
+      "afbeeldingAlt": "Fles Gordon's London Dry Gin",
+      "breedte": 269,
+      "hoogte": 828,
+      "herkomst": "Engeland",
+      "smaak": {
+        "kruidig": 0.7,
+        "vol": 0.4,
+        "zoet": 0.1,
+        "complex": 0.35
+      },
+      "smaakwoorden": [
+        "jeneverbes",
+        "limoen",
+        "droog"
+      ],
+      "momenten": [
+        "long",
+        "cocktail"
+      ],
+      "verhaal": "Een London Dry gin met een stijl die al sinds 1769 wordt gemaakt: helder, droog en jeneverbesgedreven.",
+      "serveer": "Met tonic en limoen, in een hoog glas met veel ijs.",
+      "prijs": null,
+      "voorraad": null,
+      "bron": "concept",
+      "credit": {
+        "title": "Gordons London Dry Gin im Regal",
+        "creator": "AxelHH",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gordons_London_Dry_Gin_im_Regal.jpg",
+        "changes": "achtergrond verwijderd en bijgesneden"
+      }
+    },
+    {
+      "id": "havana-club-3",
+      "naam": "Havana Club 3 Years",
+      "stijl": "Cubaanse rum",
+      "categorie": "rum",
+      "categorieLabel": "Rum",
+      "inhoud": "70 cl",
+      "alcohol": "40%",
+      "afbeelding": "public/img/producten/havana-club-3.webp",
+      "afbeeldingAlt": "Fles Havana Club 3 Years",
+      "breedte": 114,
+      "hoogte": 400,
+      "herkomst": "Cuba",
+      "smaak": {
+        "kruidig": 0.25,
+        "vol": 0.35,
+        "zoet": 0.45,
+        "complex": 0.3
+      },
+      "smaakwoorden": [
+        "banaan",
+        "vanille",
+        "licht"
+      ],
+      "momenten": [
+        "cocktail",
+        "long"
+      ],
+      "verhaal": "Een jonge Cubaanse rum van minimaal drie jaar rijping. Licht van stijl en geschikt voor mojito.",
+      "serveer": "In een mojito, of lang met cola en limoen.",
+      "prijs": null,
+      "voorraad": null,
+      "bron": "concept",
+      "credit": {
+        "title": "Havana Club Añejo 3 Años",
+        "creator": "Open Food Facts / product photo contributors",
+        "license": "CC BY-SA",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourceUrl": "https://world.openfoodfacts.org/product/8501110081641",
+        "changes": "achtergrond verwijderd en bijgesneden"
+      }
+    },
+    {
+      "id": "hennessy-vs",
+      "naam": "Hennessy VS",
+      "stijl": "Cognac",
+      "categorie": "cognac",
+      "categorieLabel": "Cognac",
+      "inhoud": "70 cl",
+      "alcohol": "40%",
+      "afbeelding": "public/img/producten/hennessy-vs.webp",
+      "afbeeldingAlt": "Fles Hennessy VS",
+      "breedte": 326,
+      "hoogte": 900,
+      "herkomst": "Frankrijk (Cognac)",
+      "smaak": {
+        "kruidig": 0.35,
+        "vol": 0.7,
+        "zoet": 0.45,
+        "complex": 0.75
+      },
+      "smaakwoorden": [
+        "eik",
+        "gedroogd fruit",
+        "warm"
+      ],
+      "momenten": [
+        "puur",
+        "long"
+      ],
+      "verhaal": "Cognac wordt twee keer gedistilleerd in koperen ketels en rijpt in eikenhouten vaten. VS betekent minimaal twee jaar rijping.",
+      "serveer": "Puur of op ijs, of lang met ginger ale.",
+      "prijs": null,
+      "voorraad": null,
+      "bron": "concept",
+      "credit": {
+        "title": "2023 Hennessy V.S. Cognac",
+        "creator": "Jacek Halicki",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023_Hennessy_V.S._Cognac.jpg",
+        "changes": "achtergrond verwijderd en bijgesneden"
+      }
+    },
+    {
+      "id": "jb-rare",
+      "naam": "J&B Rare",
+      "stijl": "Blended Scotch whisky",
+      "categorie": "whisky",
+      "categorieLabel": "Whisky",
+      "inhoud": "70 cl",
+      "alcohol": "40%",
+      "afbeelding": "public/img/producten/jb-rare.webp",
+      "afbeeldingAlt": "Fles J&B Rare",
+      "breedte": 103,
+      "hoogte": 297,
+      "herkomst": "Schotland",
+      "smaak": {
+        "kruidig": 0.25,
+        "vol": 0.3,
+        "zoet": 0.35,
+        "complex": 0.25
+      },
+      "smaakwoorden": [
+        "licht",
+        "graan",
+        "fris"
+      ],
+      "momenten": [
+        "long",
+        "puur"
+      ],
+      "verhaal": "Een lichte blended Scotch: toegankelijk van stijl en daarom een goede eerste stap in whisky.",
+      "serveer": "Op ijs, of lang met sodawater.",
+      "prijs": null,
+      "voorraad": null,
+      "bron": "concept",
+      "credit": {
+        "title": "J&B Rare",
+        "creator": "Open Food Facts / product photo contributors",
+        "license": "CC BY-SA",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourceUrl": "https://world.openfoodfacts.org/product/5010103804073",
+        "changes": "achtergrond verwijderd en bijgesneden"
+      }
+    },
+    {
+      "id": "johnnie-walker-black-label",
+      "naam": "Johnnie Walker Black Label",
+      "stijl": "Blended Scotch whisky",
+      "categorie": "whisky",
+      "categorieLabel": "Whisky",
+      "inhoud": "70 cl",
+      "alcohol": "40%",
+      "afbeelding": "public/img/producten/johnnie-walker-black-label.webp",
+      "afbeeldingAlt": "Fles Johnnie Walker Black Label",
+      "breedte": 226,
+      "hoogte": 900,
+      "herkomst": "Schotland",
+      "smaak": {
+        "kruidig": 0.65,
+        "vol": 0.75,
+        "zoet": 0.35,
+        "complex": 0.85
+      },
+      "smaakwoorden": [
+        "rook",
+        "donker fruit",
+        "kruiden"
+      ],
+      "momenten": [
+        "puur"
+      ],
+      "verhaal": "Een blended Scotch van whisky's die minimaal twaalf jaar rijpten. Volle stijl met een vleugje rook.",
+      "serveer": "Puur, met een paar druppels water, of op ijs.",
+      "prijs": null,
+      "voorraad": null,
+      "bron": "concept",
+      "credit": {
+        "title": "Botella Black Label",
+        "creator": "Eduardo Milla",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Botella_Black_Label.jpg",
+        "changes": "achtergrond verwijderd en bijgesneden"
+      }
+    },
+    {
+      "id": "martini-bianco",
+      "naam": "Martini Bianco",
+      "stijl": "Zoete vermouth",
+      "categorie": "vermouth",
+      "categorieLabel": "Vermouth",
+      "inhoud": "75 cl",
+      "alcohol": "15%",
+      "afbeelding": "public/img/producten/martini-bianco.webp",
+      "afbeeldingAlt": "Fles Martini Bianco",
+      "breedte": 236,
+      "hoogte": 900,
+      "herkomst": "Italië (Turijn)",
+      "smaak": {
+        "kruidig": 0.2,
+        "vol": 0.25,
+        "zoet": 0.8,
+        "complex": 0.3
+      },
+      "smaakwoorden": [
+        "vanille",
+        "bloemen",
+        "zacht"
+      ],
+      "momenten": [
+        "aperitief",
+        "long"
+      ],
+      "verhaal": "Vermouth is wijn die is versterkt en op smaak gebracht met kruiden. Bianco is wit en zacht van stijl.",
+      "serveer": "Op ijs met een schijf citroen, of lang met tonic.",
+      "prijs": null,
+      "voorraad": null,
+      "bron": "concept",
+      "credit": {
+        "title": "Martini Bianco",
+        "creator": "ChickenFalls",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Martini_Bianco.JPG",
+        "changes": "achtergrond verwijderd en bijgesneden"
+      }
+    },
+    {
+      "id": "smirnoff-vodka",
+      "naam": "Smirnoff Vodka",
+      "stijl": "Classic triple distilled vodka",
+      "categorie": "wodka",
+      "categorieLabel": "Wodka",
+      "inhoud": "70 cl",
+      "alcohol": "37,5%",
+      "afbeelding": "public/img/producten/smirnoff-vodka.webp",
+      "afbeeldingAlt": "Fles Smirnoff Vodka",
+      "breedte": 252,
+      "hoogte": 900,
+      "herkomst": "Rusland (oorsprong), vandaag op meerdere plekken gemaakt",
+      "smaak": {
+        "kruidig": 0.1,
+        "vol": 0.25,
+        "zoet": 0.1,
+        "complex": 0.1
+      },
+      "smaakwoorden": [
+        "neutraal",
+        "schoon",
+        "droog"
+      ],
+      "momenten": [
+        "long",
+        "cocktail"
+      ],
+      "verhaal": "Drievoudig gedistilleerd en gefilterd, met een neutrale smaak. Daardoor een veelgebruikte basis voor mixdrankjes.",
+      "serveer": "IJskoud, met tonic, of in een moscow mule.",
+      "prijs": null,
+      "voorraad": null,
+      "bron": "concept",
+      "credit": {
+        "title": "Smirnoff Red Label 8213",
+        "creator": "Ashley Pomeroy",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Smirnoff_Red_Label_8213.jpg",
+        "changes": "achtergrond verwijderd en bijgesneden"
+      }
+    }
+  ]
+}

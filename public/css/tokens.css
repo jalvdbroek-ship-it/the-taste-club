@@ -1,0 +1,49 @@
+@font-face { font-family: "Bodoni Moda"; src: url("../fonts/bodoni-moda-latin.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Cormorant"; src: url("../fonts/cormorant-normal-latin.woff2") format("woff2"); font-weight: 300 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Cormorant"; src: url("../fonts/cormorant-italic-latin.woff2") format("woff2"); font-weight: 300 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Instrument Sans"; src: url("../fonts/instrument-sans-latin.woff2") format("woff2"); font-weight: 400 700; font-style: normal; font-display: swap; }
+
+:root {
+  color-scheme: dark;
+  --night: oklch(0.15 0.006 40);
+  --wine-900: oklch(0.20 0.05 20);
+  --wine-800: oklch(0.245 0.065 20);
+  --wine-700: oklch(0.31 0.09 20);
+  --wine-600: oklch(0.40 0.105 20);
+  --gold: oklch(0.80 0.10 85);
+  --gold-dim: oklch(0.66 0.085 85);
+  --ivory: oklch(0.955 0.014 80);
+  --ivory-2: oklch(0.84 0.02 70);
+  --ivory-3: oklch(0.75 0.025 60);
+  --amber: oklch(0.62 0.13 60);
+  --paper: oklch(0.955 0.014 80);
+  --ink: oklch(0.20 0.04 20);
+  --ink-2: oklch(0.38 0.04 20);
+  --danger: oklch(0.76 0.13 25);
+  --ok: oklch(0.80 0.11 150);
+  --line: oklch(0.80 0.10 85 / 0.28);
+  --line-soft: oklch(0.955 0.014 80 / 0.12);
+
+  --font-display: "Bodoni Moda", "Didot", "Bodoni 72", serif;
+  --font-accent: "Cormorant", "Cormorant Garamond", Georgia, serif;
+  --font-ui: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --t-xs: 0.75rem; --t-sm: 0.875rem; --t-base: 1rem; --t-md: 1.25rem;
+  --t-lg: 1.563rem; --t-xl: 1.953rem; --t-2xl: 2.441rem; --t-3xl: 3.052rem;
+
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 72px;
+  --r-ctl: 10px; --r-card: 14px; --r-sheet: 22px;
+
+  --ease-out: cubic-bezier(0.22, 0.8, 0.25, 1);
+  --ease-in: cubic-bezier(0.5, 0, 0.8, 0.4);
+  --d-fast: 140ms; --d-mid: 240ms; --d-slow: 700ms;
+
+  --topbar-h: 56px;
+  --nav-h: 64px;
+  --rail: 38rem;
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-l: env(safe-area-inset-left, 0px);
+  --safe-r: env(safe-area-inset-right, 0px);
+}
+@media (min-width: 900px) { :root { --rail: 70rem; } }
