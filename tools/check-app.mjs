@@ -5,7 +5,7 @@ import { gateFlow, tasteFlow, giftFlow, collectionFlow } from "./check-flow.mjs"
 import { adminFlow, motionAndKeyboard, offlineFlow, privacyClaims } from "./check-more.mjs";
 
 const VIEWPORTS = [[390, 844], [768, 1024], [1280, 800]];
-const ROUTES = ["", "smaak", "cadeau", "collectie", "pick", "club", "producten", "product/campari", "product/smirnoff-vodka", "meer", "beheer", "privacy", "over"];
+const ROUTES = ["", "smaak", "cadeau", "collectie", "pick", "club", "producten", "product/campari", "product/smirnoff-vodka", "meer", "beheer", "privacy", "over", "rondleiding"];
 const shots = new Set(["", "smaak", "pick", "product/campari", "club", "producten", "meer", "over"]);
 
 for (const [w, h] of VIEWPORTS) {

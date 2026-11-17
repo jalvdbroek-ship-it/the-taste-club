@@ -2,6 +2,7 @@ import { html, $ } from "../lib/dom.js";
 import { icon } from "../components/icons.js";
 
 const ITEMS = [
+  ["#/rondleiding", "sparkle", "Rondleiding", "Wat je met de app kunt, in vijf stappen"],
   ["#/producten", "book", "Alle flessen", "Zoek en filter het voorbeeld-assortiment"],
   ["#/pick", "star", "The Golden Pick", "De fles waar we nu bij stilstaan"],
   ["#/club", "calendar", "Club en events", "Proeverijen, nieuws en verhalen"],
@@ -14,8 +15,12 @@ export default {
   title: "Meer",
   render(app) {
     const w = app.config.winkel, rm = app.local.getItem("tc.rm") === "1";
+    const standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
     return html`<div class="screen"><div class="screen-head"><h1 data-reveal>Meer</h1><span class="thread" aria-hidden="true"></span></div>
       <ul class="list">${ITEMS.map(([href, ic, t, s]) => html`<li data-reveal><a class="card menu-row" href="${href}"><span class="icon">${icon(ic)}</span><span><strong>${t}</strong><br><span class="muted small">${s}</span></span><span class="icon menu-row__go">${icon("arrow")}</span></a></li>`)}</ul>
+      <div class="card" id="beginscherm"><h3>Zet op je beginscherm</h3>
+        ${standalone ? html`<p class="muted">Je gebruikt The Taste Club al vanaf je beginscherm.</p>` : html`<p class="muted">Dan opent de app als een gewone app, ook zonder internet.</p>
+        <ol class="howto"><li><strong>iPhone (Safari):</strong> tik op de deelknop onderin en kies <em>Zet op beginscherm</em>.</li><li><strong>Android (Chrome):</strong> tik op het menu rechtsboven en kies <em>App installeren</em> of <em>Toevoegen aan startscherm</em>.</li></ol>`}</div>
       <div class="card"><h3>Weergave</h3><label class="row switch"><input type="checkbox" id="rm" ${rm ? "checked" : ""}><span>Minder beweging</span></label><p class="small muted">Zet animaties uit. Dit volgt ook de instelling van je apparaat.</p></div>
       <div class="card card--gold"><h3>${w.naam}</h3><p class="muted">${w.straat}<br>${w.postcode} ${w.plaats}</p><div class="row"><a class="btn btn--ghost btn--sm" href="${w.telefoonLink}">${icon("phone")} ${w.telefoon}</a></div><p class="small muted">Openingstijden zijn niet bevestigd: bel even.</p></div></div>`;
   },

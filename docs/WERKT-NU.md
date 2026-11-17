@@ -16,6 +16,9 @@ Stand: 15 november 2026 · versie 0.1.0 · **demo, ter beoordeling online op htt
 | Club en Events | Lege staat zolang niets bevestigd is. Bij een bevestigd evenement wordt alleen een **lokale interesse** opgeslagen met de tekst "bel 06 44999844 om te bevestigen" |
 | Privacy | Wissen van alle gegevens, export als JSON, back-up en herstel |
 | PWA | Manifest, iconen, service worker met offline-lijst en cacheversie. Offline-run getest |
+| Voorbeeldcollectie | `#/collectie`: bij een lege collectie laadt één knop drie favorieten, een smaakprofiel, een vergelijking en twee voorbeeldnotities. "Haal het voorbeeld weg" verwijdert alleen het voorbeeld |
+| Rondleiding | `#/rondleiding`: vijf stappen langs wat de app kan, gelinkt vanaf de start en Meer |
+| Beginscherm | Meer: uitleg voor iPhone en Android; iOS-meta en een apple-touch-icon van 180×180; deelbeeld (`public/img/deelbeeld.jpg`) |
 | Beheerprototype | `#/beheer`: producten, afbeelding, Golden Pick, evenementen, cadeau-ideeën, verhalen, export en import met validatie |
 
 ## Demo, dus niet echt
@@ -28,7 +31,7 @@ Stand: 15 november 2026 · versie 0.1.0 · **demo, ter beoordeling online op htt
 | Evenementen | Er is er geen bevestigd. Het voorbeeldevenement wordt nergens als echt getoond |
 | Verpakking in Gift Finder | Uit (`verpakking: false`) tot de winkel dit aanbiedt |
 | Openingstijden | Niet bevestigd, niet getoond |
-| Beheerpincode | **Geen beveiliging**. De pincode staat leesbaar in `config/app.json`. Het paneel werkt alleen op localhost of een privénetwerk-adres (`toegestaanOpElkeHost: false`) |
+| Beheerpincode | **Geen beveiliging**. De pincode staat leesbaar in `config/app.json`. In de demo staat het paneel open op elke host (`toegestaanOpElkeHost: true`), met het label "Demo, alleen op dit apparaat". Zet het voor een echte uitgave op `false`: dan werkt het alleen op localhost of een privénetwerk-adres |
 | Beheerwijzigingen | Blijven in de eigen browser (lokale opslag). Ze bereiken andere bezoekers niet. Export is de manier om ze aan te leveren |
 | Gebruikersgegevens | Alleen in `localStorage` op het apparaat. Geen account, geen server, geen analytics, geen derde partijen |
 | Winkelfunctie | Bestaat niet: geen mand, geen betaling, geen bezorging, geen korting, geen punten |

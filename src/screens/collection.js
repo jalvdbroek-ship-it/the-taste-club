@@ -25,6 +25,8 @@ export default {
     const gifts = s.cadeaus.map((i) => app.data.gifts.ideeen.find((g) => g.id === i)).filter(Boolean);
     return html`<div class="screen"><div class="screen-head"><h1 data-reveal>Mijn <em>collectie</em></h1><span class="thread" aria-hidden="true"></span>
       <p class="lead" data-reveal>Jouw favorieten, notities en smaak. Het blijft op dit apparaat.</p></div>
+      ${c.isEmpty() ? html`<div class="card card--gold sample"><p><strong>Even rondkijken?</strong> Laad een voorbeeldcollectie met drie flessen, een smaakprofiel en twee proefnotities. Je haalt hem met één klik weer weg.</p><button class="btn btn--sm" type="button" data-sample>Laad een voorbeeldcollectie</button></div>` : ""}
+      ${s.voorbeeld ? html`<div class="demo-note sample-note">${icon("info")}<div><p>Dit is een voorbeeldcollectie. Wat je zelf toevoegt, blijft staan als je het voorbeeld weghaalt.</p><button class="btn btn--quiet btn--sm" type="button" data-clear-sample>Haal het voorbeeld weg</button></div></div>` : ""}
       <section class="sect" aria-labelledby="c-prof"><h2 id="c-prof">Mijn <em>smaak</em></h2>
         ${s.profiel ? html`<div class="card card--gold">${radar(s.profiel)}<p class="lead">${describeProfile(s.profiel)}</p><p class="small muted">${[s.profiel.moment ? MOMENTEN.find((m) => m.id === s.profiel.moment)?.label : "", s.profiel.categorieen.length ? s.profiel.categorieen.join(", ") : ""].filter(Boolean).join(" · ")}</p><div class="row"><a class="btn btn--ghost btn--sm" href="#/smaak">Opnieuw proeven</a><button class="btn btn--quiet btn--sm" type="button" data-clear-profile>Verwijder profiel</button></div></div>`
           : html`<div class="empty">${icon("smaak")}<p>Je hebt nog geen smaakprofiel. De Taste Finder duurt een minuut.</p><a class="btn btn--sm" href="#/smaak">Start de Taste Finder</a></div>`}</section>
@@ -53,7 +55,9 @@ export default {
     const download = (name, text) => { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], { type: "application/json" })); a.download = name; document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000); };
     const onClick = async (e) => {
       const t = e.target.closest("button"); if (!t) return;
-      if (t.dataset.clearCmp !== undefined) { c.clearCompare(); reload(); }
+      if (t.dataset.sample !== undefined) { c.loadSample(app.products.map((p) => p.id)); reload(); toast("Voorbeeldcollectie geladen"); }
+      else if (t.dataset.clearSample !== undefined) { c.clearSample(); reload(); toast("Voorbeeld weggehaald"); }
+      else if (t.dataset.clearCmp !== undefined) { c.clearCompare(); reload(); }
       else if (t.dataset.clearProfile !== undefined) { c.clearProfile(); reload(); }
       else if (t.dataset.delNote) { c.removeNote(t.dataset.delNote); reload(); }
       else if (t.dataset.export !== undefined) { download(`taste-club-collectie-${new Date().toISOString().slice(0, 10)}.json`, c.exportJSON()); toast("Export gemaakt"); }

@@ -65,6 +65,16 @@ export async function giftFlow() {
 
 export async function collectionFlow() {
   const { ctx, page, issues } = await fresh(390, 844);
+  await go(page, "collectie");
+  await page.click("[data-sample]");
+  await page.waitForSelector("[data-clear-sample]");
+  check((await page.locator(".pcard").count()) === 3 && (await page.locator(".cmp-table").count()) === 1, "collectie", "voorbeeldcollectie: drie favorieten en een vergelijking");
+  await go(page, "product/campari"); await page.click("[data-fav]");
+  await go(page, "collectie");
+  await page.click("[data-clear-sample]");
+  await page.waitForSelector("[data-clear-sample]", { state: "detached" });
+  check((await page.locator(".pcard").count()) === 1 && (await page.locator("[data-sample]").count()) === 0, "collectie", "voorbeeld weg, eigen favoriet blijft staan");
+  await go(page, "product/campari"); await page.click("[data-fav]");
   await go(page, "product/campari");
   await page.click("[data-fav]"); await page.click("[data-cmp]");
   await go(page, "product/hennessy-vs");

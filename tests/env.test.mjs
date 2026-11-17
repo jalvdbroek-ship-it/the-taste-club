@@ -9,9 +9,16 @@ test("lokale en privenetwerk-hosts mogen het beheerprototype openen", () => {
 test("publieke hosts niet", () => {
   for (const h of ["degoudenkurk.nl", "172.32.0.1", "8.8.8.8", "localhost.evil.com", "", undefined]) assert.ok(!isLocalHost(h), String(h));
 });
-test("standaard staat beheer uit op publieke hosts, tenzij de config dat bewust toestaat", () => {
+test("zonder toestemming in de config staat beheer uit op publieke hosts", () => {
+  assert.equal(adminAllowed({ beheer: { toegestaanOpElkeHost: false } }, "example.com"), false);
+  assert.equal(adminAllowed({}, "example.com"), false);
+  assert.equal(adminAllowed({ beheer: { toegestaanOpElkeHost: false } }, "localhost"), true);
+});
+test("de demo zet beheer bewust open op elke host, met een label dat zegt dat het een demo zonder beveiliging is", () => {
   const { config } = load();
-  assert.equal(config.beheer.toegestaanOpElkeHost, false);
-  assert.equal(adminAllowed(config, "example.com"), false);
-  assert.equal(adminAllowed({ beheer: { toegestaanOpElkeHost: true } }, "example.com"), true);
+  assert.equal(config.beheer.toegestaanOpElkeHost, true);
+  assert.equal(adminAllowed(config, "jalvdbroek-ship-it.github.io"), true);
+  assert.match(config.beheer.label, /demo/i);
+  assert.match(config.beheer.label, /geen echte beveiliging/i);
+  assert.match(config.beheer.label, /dit apparaat/i);
 });

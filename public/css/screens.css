@@ -112,3 +112,11 @@ code { font-family: ui-monospace, Consolas, monospace; font-size: .9em; color: v
   .pick__cols { grid-template-columns: 1fr; gap: var(--s-6); }
   .pick__side { position: static; }
 }
+
+/* Rondleiding, voorbeeldcollectie en beginscherm-uitleg */
+.tour__head { justify-content: space-between; }
+.tour__title { margin-block: var(--s-2) var(--s-1); }
+.tour .btn { justify-self: start; }
+.sample { display: grid; gap: var(--s-3); justify-items: start; }
+.sample-note > div { display: grid; gap: var(--s-2); justify-items: start; }
+.howto { display: grid; gap: var(--s-2); padding-left: 1.2rem; list-style: decimal; color: var(--ivory-2); }

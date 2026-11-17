@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { createCollection, KEY, BACKUP_KEY, CORRUPT_KEY, MAX_COMPARE, NOTE_MAX } from "../src/lib/collection.mjs";
+import { createCollection, KEY, BACKUP_KEY, CORRUPT_KEY, MAX_COMPARE, NOTE_MAX, SAMPLE } from "../src/lib/collection.mjs";
 import { memoryStorage, wipeAll } from "../src/lib/storage.mjs";
 
 const mk = (seed) => { const s = memoryStorage(seed); return [createCollection(s, () => "2026-11-15"), s]; };
@@ -60,4 +60,30 @@ test("interesse in een evenement bewaart alleen id, aantal en datum", () => {
 test("opslaan dat mislukt (vol) wordt gemeld in plaats van te crashen", () => {
   const s = memoryStorage(); s.setItem = () => { throw new Error("quota"); };
   const c = createCollection(s); c.toggleFav("x"); assert.equal(c.saveFailed, true);
+});
+
+test("voorbeeldcollectie: laden vult een lege collectie en blijft bewaard", () => {
+  const [c, s] = mk();
+  assert.ok(c.isEmpty());
+  c.loadSample(["johnnie-walker-black-label", "hennessy-vs", "gordons-london-dry", "campari"]);
+  assert.deepEqual(c.state.favorieten, SAMPLE.favorieten);
+  assert.equal(c.state.notities.length, 2);
+  assert.ok(c.state.notities.every((n) => n.id.startsWith("vb-") && n.datum === "2026-11-15"));
+  assert.ok(c.state.profiel && c.state.voorbeeld);
+  assert.ok(!c.isEmpty());
+  assert.equal(createCollection(s).state.voorbeeld, true);
+});
+test("voorbeeldcollectie: alleen bestaande flessen, en weghalen laat eigen werk staan", () => {
+  const [c] = mk();
+  c.toggleFav("campari");
+  c.addNote("campari", { tekst: "eigen notitie" });
+  c.loadSample(["hennessy-vs", "campari"]);
+  assert.deepEqual(c.state.favorieten, ["campari", "hennessy-vs"]);
+  assert.equal(c.state.notities.filter((n) => n.id.startsWith("vb-")).length, 1);
+  assert.ok(c.clearSample());
+  assert.deepEqual(c.state.favorieten, ["campari"]);
+  assert.deepEqual(c.state.notities.map((n) => n.tekst), ["eigen notitie"]);
+  assert.equal(c.state.profiel, null);
+  assert.equal(c.state.voorbeeld, false);
+  assert.equal(c.clearSample(), false);
 });

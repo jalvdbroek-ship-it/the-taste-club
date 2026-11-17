@@ -1,6 +1,6 @@
 // Offline-cache: schil, data en afbeeldingen worden vooraf opgehaald; daarna stale-while-revalidate voor same-origin GET.
 // Verhoog VERSION bij elke wijziging aan bestanden, anders blijft een oude cache actief.
-const VERSION = "tasteclub-v3";
+const VERSION = "tasteclub-v4";
 const CORE = [
   "./",
   "index.html",
@@ -9,18 +9,21 @@ const CORE = [
   "public/css/base.css",
   "public/css/components.css",
   "public/css/motion.css",
+  "public/css/scre",
   "public/css/screens.css",
   "public/css/tokens.css",
   "public/fonts/bodoni-moda-latin.woff2",
   "public/fonts/cormorant-italic-latin.woff2",
   "public/fonts/cormorant-normal-latin.woff2",
   "public/fonts/instrument-sans-latin.woff2",
+  "public/icons/apple-touch-icon.png",
   "public/icons/favicon.svg",
   "public/icons/icon-192.png",
   "public/icons/icon-512.png",
   "public/icons/icon-maskable-512.png",
   "public/icons/merkteken.svg",
   "public/img/chevron.svg",
+  "public/img/deelbeeld.jpg",
   "public/img/korrel.svg",
   "public/img/nix18/nix18-wit.png",
   "public/img/producten/bacardi-carta-blanca.webp",
@@ -70,6 +73,7 @@ const CORE = [
   "src/screens/product.js",
   "src/screens/products.js",
   "src/screens/taste.js",
+  "src/screens/tour.js",
   "src/state/app-state.js",
 ];
 

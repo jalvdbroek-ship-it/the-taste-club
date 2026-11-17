@@ -14,6 +14,7 @@ const ROUTES = [
   [/^\/beheer$/, "meer", () => import("./screens/admin.js")],
   [/^\/privacy$/, "meer", () => import("./screens/privacy.js")],
   [/^\/over$/, "meer", () => import("./screens/about.js")],
+  [/^\/rondleiding$/, "meer", () => import("./screens/tour.js")],
 ];
 
 export function startRouter(app, onShown) {

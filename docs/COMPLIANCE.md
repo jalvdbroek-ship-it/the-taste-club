@@ -103,7 +103,7 @@ fail-met-mitigatie: er is een echte poort (A1), maar geen verificatie. Er worden
 ## Wat in deze pas is ingebouwd
 
 1. Strikte CSP (header en meta) zonder `unsafe-inline`; RUNTIME bevestigd: 0 CSP-fouten, 0 externe verzoeken.
-2. Beheerpaneel alleen op lokale hosts (`env.mjs`).
+2. Beheerpaneel: in deze demo bewust open op elke host (`toegestaanOpElkeHost: true`, 17 november 2026), zodat de ondernemer het in de online preview kan proberen. Het label zegt "Demo, alleen op dit apparaat" en dat de pincode geen beveiliging is. Wijzigingen blijven in de eigen browser en bereiken niemand anders. Voor een echte uitgave weer op `false` zetten (`PUBLICEREN.md`, punt 6).
 3. Prijzen, voorraad, verpakking en evenementen bestaan in de UI alleen na bevestiging; geautomatiseerde tests (`data.test`, `gifts.test`) weigeren een prijs zonder `prijzenBevestigd` en een reservering zonder `bevestigd`.
 4. Interesse in een evenement is expliciet geen reservering en noemt het telefoonnummer.
 5. Wissen, exporteren, back-up en herstel van gebruikersgegevens.

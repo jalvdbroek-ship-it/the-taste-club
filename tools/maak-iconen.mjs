@@ -8,7 +8,7 @@ const icon = (size, pad, radius) => `<!doctype html><body style="margin:0;backgr
 
 const { chromium } = await loadPlaywright();
 const browser = await chromium.launch();
-for (const [name, size, pad, radius] of [["icon-192.png", 192, 0, 14], ["icon-512.png", 512, 0, 14], ["icon-maskable-512.png", 512, 9, 0]]) {
+for (const [name, size, pad, radius] of [["icon-192.png", 192, 0, 14], ["icon-512.png", 512, 0, 14], ["icon-maskable-512.png", 512, 9, 0], ["apple-touch-icon.png", 180, 5, 0]]) {
   const page = await browser.newPage({ viewport: { width: size, height: size } });
   await page.setContent(icon(size, pad, radius));
   writeFileSync(new URL(`../public/icons/${name}`, import.meta.url), await page.screenshot({ omitBackground: true, type: "png" }));

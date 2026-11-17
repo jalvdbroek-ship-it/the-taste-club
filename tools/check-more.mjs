@@ -5,6 +5,15 @@ const login = async (page) => { await go(page, "beheer"); if (await page.locator
 
 export async function adminFlow() {
   const { ctx, page, issues } = await fresh(390, 844);
+  { // De demo staat beheer toe op een publieke host; het label zegt dat het een demo zonder beveiliging is.
+    const pub = await ctx.newPage();
+    await pub.addInitScript(() => { sessionStorage.setItem("tc.leeftijd18", "ja"); sessionStorage.setItem("tc.intro", "1"); });
+    await pub.goto(`${BASE.replace(/\/\/(localhost|127\.0\.0\.1)/, "//taste-club.test")}#/beheer`);
+    await pub.waitForSelector("#view h1");
+    check((await pub.locator("#pin-i").count()) === 1, "beheer", "pincodescherm op een niet-lokale host (taste-club.test)");
+    check(/alleen op dit apparaat/.test(await pub.locator(".demo-note").first().innerText()), "beheer", "label: demo, alleen op dit apparaat");
+    await pub.close();
+  }
   await go(page, "beheer");
   await page.fill("#pin-i", "0000"); await page.click("#pin button[type=submit]");
   check((await page.locator("#pin-e").innerText()).includes("Onjuiste"), "beheer", "foute pincode wordt geweigerd");

@@ -53,7 +53,8 @@ Geen `npm install` nodig: geen dependencies, geen build. Playwright wordt alleen
 - The Golden Pick, Club en Events (alleen bevestigde evenementen, interesse blijft lokaal), productbibliotheek
 - Installeerbaar en offline bruikbaar (manifest, service worker), minder-beweging-modus, toetsenbord en focus
 - Geen cookies, geen analytics, geen externe verzoeken; strikte CSP; wissen en exporteren van eigen gegevens
-- Demo-beheer met export en import van JSON, alleen op lokale adressen
+- Demo-beheer met export en import van JSON; in de online demo open als "demo, alleen op dit apparaat"
+- Voorbeeldcollectie in één klik, korte rondleiding (`#/rondleiding`) en uitleg om de app op je beginscherm te zetten
 
 ## Documenten
 

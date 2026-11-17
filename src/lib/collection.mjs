@@ -7,7 +7,18 @@ export const CORRUPT_KEY = "tc.collectie.corrupt";
 export const MAX_COMPARE = 3;
 export const NOTE_MAX = 600;
 
-const fresh = () => ({ v: 1, favorieten: [], cadeaus: [], notities: [], profiel: null, vergelijk: [], interesses: [] });
+const fresh = () => ({ v: 1, favorieten: [], cadeaus: [], notities: [], profiel: null, vergelijk: [], interesses: [], voorbeeld: false });
+
+// Voorbeeldcollectie om de app in één klik te proberen. Notities krijgen een "vb-"-id, zodat het voorbeeld los te wissen is.
+export const SAMPLE = {
+  favorieten: ["johnnie-walker-black-label", "hennessy-vs", "gordons-london-dry"],
+  vergelijk: ["johnnie-walker-black-label", "hennessy-vs"],
+  profiel: { kruidig: 0.6, vol: 0.7, zoet: 0.4, complex: 0.6, categorieen: ["whisky", "cognac"], moment: null },
+  notities: [
+    { id: "vb-1", productId: "hennessy-vs", beoordeling: 4, tekst: "Voorbeeldnotitie: zacht en rond, met vanille en gedroogd fruit." },
+    { id: "vb-2", productId: "johnnie-walker-black-label", beoordeling: 4, tekst: "Voorbeeldnotitie: licht rokerig, met een warme afdronk." }
+  ]
+};
 const uniq = (a) => [...new Set(a.filter((x) => typeof x === "string" && x))];
 const isDate = (s) => typeof s === "string" && /^\d{4}-\d{2}-\d{2}$/.test(s);
 const uid = () => Math.random().toString(36).slice(2, 8) + Date.now().toString(36).slice(-4);
@@ -27,6 +38,7 @@ export function sanitize(x) {
   }
   s.interesses = (Array.isArray(x.interesses) ? x.interesses : []).filter((i) => i && typeof i.eventId === "string")
     .map((i) => ({ eventId: i.eventId, aantal: Math.min(8, Math.max(1, Number.isInteger(i.aantal) ? i.aantal : 1)), datum: isDate(i.datum) ? i.datum : null }));
+  s.voorbeeld = x.voorbeeld === true;
   return s;
 }
 
@@ -108,6 +120,29 @@ export function createCollection(storage, today = () => new Date().toISOString()
       try { state = sanitize(JSON.parse(b)); save(); return true; } catch { return false; }
     },
     hasBackup: () => !!storage.getItem(BACKUP_KEY),
+    isEmpty: () => !state.favorieten.length && !state.notities.length && !state.cadeaus.length && !state.profiel,
+    // Voegt het voorbeeld toe zonder iets van de gebruiker te overschrijven; alleen bestaande product-id's.
+    loadSample(knownIds) {
+      const known = new Set(knownIds);
+      state.favorieten = uniq([...state.favorieten, ...SAMPLE.favorieten.filter((id) => known.has(id))]);
+      if (!state.vergelijk.length) state.vergelijk = SAMPLE.vergelijk.filter((id) => known.has(id));
+      const ids = new Set(state.notities.map((n) => n.id));
+      state.notities = [...state.notities, ...SAMPLE.notities.filter((n) => known.has(n.productId) && !ids.has(n.id)).map((n) => ({ ...n, datum: today() }))];
+      if (!state.profiel) state.profiel = sanitize({ profiel: { ...SAMPLE.profiel, datum: today() } }).profiel;
+      state.voorbeeld = true;
+      save();
+    },
+    clearSample() {
+      if (!state.voorbeeld) return false;
+      const favs = new Set(SAMPLE.favorieten);
+      state.favorieten = state.favorieten.filter((id) => !favs.has(id));
+      state.vergelijk = state.vergelijk.filter((id) => !favs.has(id));
+      state.notities = state.notities.filter((n) => !n.id.startsWith("vb-"));
+      state.profiel = null;
+      state.voorbeeld = false;
+      save();
+      return true;
+    },
     wipe() { state = fresh(); const n = wipeAll(storage); listeners.forEach((fn) => fn(state)); return n; },
   };
 }

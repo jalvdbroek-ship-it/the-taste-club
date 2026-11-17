@@ -29,7 +29,7 @@ export default {
         <div class="hero__art" aria-hidden="true" data-reveal>${raw(MARK)}</div>
       </section>
 
-      <div class="demo-note" data-reveal>${icon("info")}<p>Dit is een demo. Het assortiment is een voorbeeld en er wordt niets verkocht. Prijzen en voorraad staan er bewust niet in: die bevestigt De Gouden Kurk zelf.</p></div>
+      <div class="demo-note" data-reveal>${icon("info")}<p>Dit is een demo. Het assortiment is een voorbeeld en er wordt niets verkocht. Prijzen en voorraad staan er bewust niet in: die bevestigt De Gouden Kurk zelf. Nieuw hier? Volg de <a class="link" href="#/rondleiding">korte rondleiding</a>.</p></div>
 
       ${pp ? html`<section class="sect scroll-in" aria-labelledby="h-pick"><div class="sect__head"><h2 id="h-pick">The <em>Golden</em> Pick</h2><a class="link" href="#/pick">Lees meer</a></div>
         <a class="pick-card" href="#/pick"><div class="stage parallax">${productImg(pp, "eager")}</div>

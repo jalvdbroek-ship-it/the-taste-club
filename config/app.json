@@ -18,8 +18,8 @@
   },
   "beheer": {
     "pincode": "1234",
-    "label": "Demo-toegang. Dit is geen echte beveiliging: de pincode staat leesbaar in dit bestand.",
-    "toegestaanOpElkeHost": false
+    "label": "Demo, alleen op dit apparaat. Wijzigingen blijven in deze browser en gaan nergens heen. De pincode is geen echte beveiliging: hij staat leesbaar in de bestanden van de app.",
+    "toegestaanOpElkeHost": true
   },
   "limieten": {
     "afbeeldingKB": 400,

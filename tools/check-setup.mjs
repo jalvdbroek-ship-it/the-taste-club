@@ -4,7 +4,8 @@ import { loadPlaywright } from "./browser.mjs";
 export const BASE = process.env.BASE || "http://localhost:4300/";
 export const state = { fails: 0, oks: 0 };
 export const { chromium } = await loadPlaywright();
-export const browser = await chromium.launch();
+// taste-club.test wijst naar deze machine: zo is een niet-lokale host na te bootsen voor het beheer.
+export const browser = await chromium.launch({ args: ["--host-resolver-rules=MAP taste-club.test 127.0.0.1"] });
 mkdirSync("docs/screenshots", { recursive: true });
 
 export const fail = (scope, msg) => { state.fails++; console.log(`  FOUT [${scope}] ${msg}`); };
