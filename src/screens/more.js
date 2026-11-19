@@ -3,6 +3,7 @@ import { icon } from "../components/icons.js";
 
 const ITEMS = [
   ["#/rondleiding", "sparkle", "Rondleiding", "Wat je met de app kunt, in vijf stappen"],
+  ["#/recepten", "calendar", "Recepten voor de feestdagen", "Sinterklaas, Kerst, Oud en nieuw en Halloween"],
   ["#/producten", "book", "Alle flessen", "Zoek en filter het voorbeeld-assortiment"],
   ["#/pick", "star", "The Golden Pick", "De fles waar we nu bij stilstaan"],
   ["#/club", "calendar", "Club en events", "Proeverijen, nieuws en verhalen"],

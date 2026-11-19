@@ -18,6 +18,7 @@ Stand: 15 november 2026 · versie 0.1.0 · **demo, ter beoordeling online op htt
 | PWA | Manifest, iconen, service worker met offline-lijst en cacheversie. Offline-run getest |
 | Voorbeeldcollectie | `#/collectie`: bij een lege collectie laadt één knop drie favorieten, een smaakprofiel, een vergelijking en twee voorbeeldnotities. "Haal het voorbeeld weg" verwijdert alleen het voorbeeld |
 | Rondleiding | `#/rondleiding`: vijf stappen langs wat de app kan, gelinkt vanaf de start en Meer |
+| Recepten | `#/recepten`: vijf recepten bij vier feestdagen, met keuzeknoppen. Standaard staat de feestdag van nu aan (buiten een periode: Alles). Elk recept heeft een versie zonder alcohol en de 18+-regel. Teaser op het beginscherm |
 | Beginscherm | Meer: uitleg voor iPhone en Android; iOS-meta en een apple-touch-icon van 180×180; deelbeeld (`public/img/deelbeeld.jpg`) |
 | Beheerprototype | `#/beheer`: producten, afbeelding, Golden Pick, evenementen, cadeau-ideeën, verhalen, export en import met validatie |
 

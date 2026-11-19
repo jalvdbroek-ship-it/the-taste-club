@@ -55,6 +55,7 @@ Geen `npm install` nodig: geen dependencies, geen build. Playwright wordt alleen
 - Geen cookies, geen analytics, geen externe verzoeken; strikte CSP; wissen en exporteren van eigen gegevens
 - Demo-beheer met export en import van JSON; in de online demo open als "demo, alleen op dit apparaat"
 - Voorbeeldcollectie in één klik, korte rondleiding (`#/rondleiding`) en uitleg om de app op je beginscherm te zetten
+- Recepten voor de feestdagen (`#/recepten`): Sinterklaas, Kerst, Oud en nieuw en Halloween, elk recept ook zonder alcohol. De app begint bij de feestdag die nu loopt; de teksten staan in `src/data/recepten.json`, de periodes in `src/lib/feest.mjs`
 
 ## Documenten
 

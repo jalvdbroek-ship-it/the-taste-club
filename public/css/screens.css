@@ -120,3 +120,18 @@ code { font-family: ui-monospace, Consolas, monospace; font-size: .9em; color: v
 .sample { display: grid; gap: var(--s-3); justify-items: start; }
 .sample-note > div { display: grid; gap: var(--s-2); justify-items: start; }
 .howto { display: grid; gap: var(--s-2); padding-left: 1.2rem; list-style: decimal; color: var(--ivory-2); }
+
+/* recepten voor de feestdagen */
+.recepten { display: grid; gap: var(--s-6); }
+.recept { display: grid; gap: var(--s-3); }
+.recept summary { cursor: pointer; list-style: none; display: grid; gap: 4px; justify-items: start; min-height: 44px; }
+.recept summary::-webkit-details-marker { display: none; }
+.recept[open] summary h3 { color: var(--gold); }
+.recept__body { display: grid; gap: var(--s-3); padding-top: var(--s-3); border-top: 1px solid var(--line-soft); max-width: 60ch; }
+.recept__body h4 { font-family: var(--font-display); font-size: var(--t-sm); font-weight: 400; letter-spacing: .06em; color: var(--gold); }
+.recept__lijst { display: grid; gap: var(--s-1); padding-left: 1.2rem; list-style: disc; color: var(--ivory-2); }
+.recept__vooraf { color: var(--ivory-2); }
+.recept__zonder { display: grid; gap: var(--s-1); padding: var(--s-3) var(--s-4); border: 1px solid var(--line); border-radius: var(--r-card); }
+.recept__zonder p { color: var(--ivory-2); }
+#rstatus { display: flex; gap: var(--s-2); align-items: center; color: var(--ivory-2); }
+#rstatus svg { width: 18px; height: 18px; flex: none; stroke: var(--gold); fill: none; stroke-width: 1.5; }

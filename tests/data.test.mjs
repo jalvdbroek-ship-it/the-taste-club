@@ -54,7 +54,7 @@ test("verhaal, cadeau en pick-validatie", () => {
 test("DataSource: bestandsbron laadt alles, API-bron meldt eerlijk dat hij niet bestaat", async () => {
   const src = createFileSource(async (p) => readJson(p));
   const data = await src.load();
-  assert.deepEqual(Object.keys(data).sort(), ["catalog", "config", "events", "gifts", "pick", "stories"]);
+  assert.deepEqual(Object.keys(data).sort(), ["catalog", "config", "events", "gifts", "pick", "recepten", "stories"]);
   await assert.rejects(createApiSource().load(), { code: "niet-gebouwd" });
   assert.equal(createDataSource("api").id, "api"); assert.equal(createDataSource("x", { read: async () => ({}) }).id, "bestanden");
 });

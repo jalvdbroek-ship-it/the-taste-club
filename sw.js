@@ -1,6 +1,6 @@
 // Offline-cache: schil, data en afbeeldingen worden vooraf opgehaald; daarna stale-while-revalidate voor same-origin GET.
 // Verhoog VERSION bij elke wijziging aan bestanden, anders blijft een oude cache actief.
-const VERSION = "tasteclub-v4";
+const VERSION = "tasteclub-v5";
 const CORE = [
   "./",
   "index.html",
@@ -46,6 +46,7 @@ const CORE = [
   "src/data/events.json",
   "src/data/gifts.json",
   "src/data/golden-pick.json",
+  "src/data/recepten.json",
   "src/data/stories.json",
   "src/lib/admin-forms.js",
   "src/lib/admin-store.mjs",
@@ -55,6 +56,7 @@ const CORE = [
   "src/lib/dom.js",
   "src/lib/env.mjs",
   "src/lib/events.mjs",
+  "src/lib/feest.mjs",
   "src/lib/gifts.mjs",
   "src/lib/notes-ui.js",
   "src/lib/storage.mjs",
@@ -72,6 +74,7 @@ const CORE = [
   "src/screens/privacy.js",
   "src/screens/product.js",
   "src/screens/products.js",
+  "src/screens/recepten.js",
   "src/screens/taste.js",
   "src/screens/tour.js",
   "src/state/app-state.js",

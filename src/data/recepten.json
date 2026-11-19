@@ -1,0 +1,110 @@
+{
+  "feestdagen": [
+    { "id": "halloween", "naam": "Halloween", "start": "10-01", "einde": "10-31", "periode": "1 tot en met 31 oktober", "intro": "Donker, scherp en met gember. Een glas dat bij een donkere avond past." },
+    { "id": "sinterklaas", "naam": "Sinterklaas", "start": "11-01", "einde": "12-05", "periode": "1 november tot en met 5 december", "intro": "Speculaas hoort bij november. Hier zit de smaak in de siroop, met een gewone whisky als basis." },
+    { "id": "kerst", "naam": "Kerst", "start": "12-06", "einde": "12-26", "periode": "6 tot en met 26 december", "intro": "Warm en romig, voor aan tafel met mensen die je graag ziet." },
+    { "id": "oud-en-nieuw", "naam": "Oud en nieuw", "start": "12-27", "einde": "01-02", "periode": "27 december tot en met 2 januari", "intro": "Bubbels voor middernacht, met een scheutje zwarte bes." }
+  ],
+  "recepten": [
+    {
+      "id": "speculaas-old-fashioned",
+      "feestdag": "sinterklaas",
+      "naam": "Speculaas Old Fashioned",
+      "intro": "Een klassieke Old Fashioned, met een siroop van speculaaskruiden in plaats van gewone suiker.",
+      "glazen": "1 glas",
+      "tijd": "5 minuten, plus 10 minuten voor de siroop",
+      "vooraf": "Maak de speculaassiroop. Laat 100 g suiker, 100 ml water en 1 theelepel speculaaskruiden 5 minuten zachtjes koken en laat het afkoelen. In de koelkast blijft de siroop een week goed.",
+      "ingredienten": ["6 cl whisky", "1 theelepel speculaassiroop", "2 scheuten bitters", "1 stuk sinaasappelschil", "ijsblokjes, het liefst 1 groot blok"],
+      "bereiding": [
+        "Doe de whisky, de siroop en de bitters met een paar ijsblokjes in een mengglas.",
+        "Roer 30 seconden, tot het glas koud aanvoelt.",
+        "Giet het over een groot ijsblok in een kort glas.",
+        "Knijp de sinaasappelschil boven het glas uit en leg hem erin."
+      ],
+      "zonderAlcohol": "Neem 6 cl sterke, koude zwarte thee in plaats van de whisky. De rest blijft hetzelfde.",
+      "tip": "Kies een whisky die rond en zacht is. Die laat de kruiden meespelen.",
+      "producten": ["johnnie-walker-black-label", "ballantines-finest"],
+      "toonbank": ""
+    },
+    {
+      "id": "eggnog",
+      "feestdag": "kerst",
+      "naam": "Eggnog",
+      "intro": "Een romig kerstdrankje van ei, melk en room, met nootmuskaat erover.",
+      "glazen": "4 glazen",
+      "tijd": "25 minuten, plus 2 uur koelen",
+      "vooraf": "",
+      "ingredienten": ["4 eierdooiers", "80 g suiker", "500 ml melk", "250 ml room", "1 theelepel vanille", "12 cl rum of cognac", "nootmuskaat om te raspen"],
+      "bereiding": [
+        "Klop de eierdooiers met de suiker tot een lichte massa.",
+        "Verwarm de melk, de room en de vanille tot er stoom afkomt. Laat het niet koken.",
+        "Giet een bakje van de warme melk al roerend bij de dooiers. Giet daarna alles terug in de pan.",
+        "Verwarm 5 minuten op laag vuur en blijf roeren, tot de massa iets dikker wordt.",
+        "Laat afkoelen, roer de rum of cognac erdoor en zet het minstens 2 uur in de koelkast.",
+        "Roer nog eens door, schenk in kleine glazen en rasp wat nootmuskaat erover."
+      ],
+      "zonderAlcohol": "Laat de rum of cognac weg en doe er een extra theelepel vanille bij.",
+      "tip": "Cognac maakt het warm en rond. Rum maakt het zoeter. Bewaar het hooguit 2 dagen in de koelkast.",
+      "producten": ["hennessy-vs", "havana-club-3"],
+      "toonbank": ""
+    },
+    {
+      "id": "warme-wijn",
+      "feestdag": "kerst",
+      "naam": "Warme wijn met sinaasappel",
+      "intro": "Rode wijn die zacht warm wordt met sinaasappel, kaneel en kruidnagel.",
+      "glazen": "4 glazen",
+      "tijd": "20 minuten",
+      "vooraf": "",
+      "ingredienten": ["1 fles rode wijn (75 cl)", "1 sinaasappel, in schijven", "2 kaneelstokjes", "4 kruidnagels", "2 steranijs", "3 eetlepels suiker of honing"],
+      "bereiding": [
+        "Doe alles in een pan.",
+        "Verwarm 15 minuten op laag vuur. Laat de wijn niet koken, want dan wordt hij bitter.",
+        "Schep de kruiden eruit en schenk in warme glazen."
+      ],
+      "zonderAlcohol": "Gebruik 600 ml rood druivensap en 150 ml sterke zwarte thee in plaats van de wijn. Proef eerst, voordat je er suiker bij doet.",
+      "tip": "Neem een wijn die niet te zwaar is.",
+      "producten": [],
+      "toonbank": "Wijn vind je in de supermarkt naast de winkel. Vraag aan de toonbank welke kruiden en welke wijn er goed bij passen."
+    },
+    {
+      "id": "bubbels-cassis",
+      "feestdag": "oud-en-nieuw",
+      "naam": "Bubbels met cassis",
+      "intro": "Droge bubbels met een scheutje zwarte bessenlikeur. Snel klaar, mooi van kleur.",
+      "glazen": "1 glas",
+      "tijd": "2 minuten",
+      "vooraf": "",
+      "ingredienten": ["2 cl crème de cassis (zwarte bessenlikeur)", "10 cl droge bubbels, koud", "1 stukje citroenschil"],
+      "bereiding": [
+        "Schenk de cassis in een koud glas.",
+        "Vul langzaam aan met de bubbels.",
+        "Draai het stukje citroenschil boven het glas en leg het erin."
+      ],
+      "zonderAlcohol": "Neem 2 cl zwarte bessensap en 10 cl alcoholvrije bubbels of bruisend water.",
+      "tip": "Rij je nog? Kies dan de versie zonder alcohol.",
+      "producten": [],
+      "toonbank": "Vraag aan de toonbank naar crème de cassis en droge bubbels."
+    },
+    {
+      "id": "rum-gember-limoen",
+      "feestdag": "halloween",
+      "naam": "Rum, gember en limoen",
+      "intro": "Een lang drankje met veel ijs. Scherp van de gember, fris van de limoen.",
+      "glazen": "1 glas",
+      "tijd": "3 minuten",
+      "vooraf": "",
+      "ingredienten": ["5 cl rum", "12 cl gemberbier", "het sap van een halve limoen", "1 schijfje limoen", "veel ijs"],
+      "bereiding": [
+        "Vul een hoog glas met ijs.",
+        "Knijp het limoensap erin en voeg de rum toe.",
+        "Schenk het gemberbier erbij.",
+        "Roer één keer zacht en leg de limoenschijf erop."
+      ],
+      "zonderAlcohol": "Laat de rum weg. Neem gemberbier met limoen en een scheutje zwarte thee voor de donkere kleur.",
+      "tip": "Hoe donkerder de rum, hoe kruidiger het glas. Een lichte rum maakt het frisser.",
+      "producten": ["havana-club-3", "bacardi-carta-blanca"],
+      "toonbank": ""
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 // Eén DataSource-vorm met twee implementaties: bestanden (nu) en API (contract in docs/API-CONTRACT.md, niet gebouwd).
-const FILES = { config: "config/app.json", catalog: "src/data/catalog.json", events: "src/data/events.json", stories: "src/data/stories.json", gifts: "src/data/gifts.json", pick: "src/data/golden-pick.json" };
+const FILES = { config: "config/app.json", catalog: "src/data/catalog.json", events: "src/data/events.json", stories: "src/data/stories.json", gifts: "src/data/gifts.json", pick: "src/data/golden-pick.json", recepten: "src/data/recepten.json" };
 
 export function createFileSource(read) {
   return {

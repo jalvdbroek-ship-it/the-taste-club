@@ -5,6 +5,7 @@ import { productImg } from "../components/product-card.js";
 import { visibleEvents, formatDate } from "../lib/events.mjs";
 import { AXES } from "../lib/taste.mjs";
 import { radar } from "../components/radar.js";
+import { huidigeFeestdag, receptenVoor } from "../lib/feest.mjs";
 
 const giftCard = (app, g) => {
   const items = g.producten.map((id) => app.product(id)).filter(Boolean);
@@ -18,6 +19,7 @@ export default {
     const stories = d.stories.items.filter((s) => s.status === "gepubliceerd" && s.soort !== "nieuws").slice(0, 3);
     const events = visibleEvents(d.events.items);
     const c = app.collection.state;
+    const { feestdag, actief } = huidigeFeestdag(d.recepten.feestdagen), eerste = receptenVoor(d.recepten.recepten, feestdag.id)[0];
     return html`<div class="screen">
       <section class="hero" aria-labelledby="h-welkom">
         <div class="hero__text">
@@ -30,6 +32,9 @@ export default {
       </section>
 
       <div class="demo-note" data-reveal>${icon("info")}<p>Dit is een demo. Het assortiment is een voorbeeld en er wordt niets verkocht. Prijzen en voorraad staan er bewust niet in: die bevestigt De Gouden Kurk zelf. Nieuw hier? Volg de <a class="link" href="#/rondleiding">korte rondleiding</a>.</p></div>
+
+      ${eerste ? html`<section class="sect scroll-in" aria-labelledby="h-recept"><div class="sect__head"><h2 id="h-recept">${actief ? "Recept voor" : "Straks:"} <em>${feestdag.naam}</em></h2><a class="link" href="#/recepten">Alle recepten</a></div>
+        <a class="card card--gold" href="#/recepten"><span class="tag">${actief ? "Nu" : "Straks"}</span><h3>${eerste.naam}</h3><p class="muted">${eerste.intro}</p><p class="small muted">${feestdag.periode}</p></a></section>` : ""}
 
       ${pp ? html`<section class="sect scroll-in" aria-labelledby="h-pick"><div class="sect__head"><h2 id="h-pick">The <em>Golden</em> Pick</h2><a class="link" href="#/pick">Lees meer</a></div>
         <a class="pick-card" href="#/pick"><div class="stage parallax">${productImg(pp, "eager")}</div>

@@ -14,6 +14,7 @@ const ROUTES = [
   [/^\/beheer$/, "meer", () => import("./screens/admin.js")],
   [/^\/privacy$/, "meer", () => import("./screens/privacy.js")],
   [/^\/over$/, "meer", () => import("./screens/about.js")],
+  [/^\/recepten$/, "meer", () => import("./screens/recepten.js")],
   [/^\/rondleiding$/, "meer", () => import("./screens/tour.js")],
 ];
 

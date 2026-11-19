@@ -101,3 +101,29 @@ export async function collectionFlow() {
   check((await page.evaluate(() => Object.keys(localStorage).filter((k) => k.startsWith("tc.")).length)) === 0, "collectie", "wissen verwijdert alle eigen opslag");
   report(issues, "collectie"); await ctx.close();
 }
+
+// Recepten: de app begint bij de feestdag van nu; buiten een periode staat "Alles" aan en komt de eerstvolgende als tekst.
+export async function receptenFlow() {
+  for (const [datum, verwacht, status] of [["2026-11-19", "Sinterklaas", /^Nu: Sinterklaas/], ["2027-03-10", "Alles", /^Straks: Halloween/]]) {
+    const { ctx, page, issues } = await fresh(390, 844);
+    await page.addInitScript((iso) => {
+      const t = new Date(`${iso}T12:00:00`).getTime(), Echt = Date;
+      globalThis.Date = class extends Echt { constructor(...a) { a.length ? super(...a) : super(t); } static now() { return t; } };
+    }, datum);
+    await go(page, "recepten"); await page.waitForSelector("#rlist .recept");
+    check((await page.locator('[data-f][aria-pressed="true"]').innerText()) === verwacht, "recepten", `${datum}: ${verwacht} staat aan`);
+    check(status.test((await page.locator("#rstatus").innerText()).trim()), "recepten", `${datum}: statusregel`);
+    if (verwacht === "Sinterklaas") {
+      check((await page.locator(".recept").count()) === 1 && /speculaas/i.test(await page.locator(".recept h3").innerText()), "recepten", "Sinterklaas toont het speculaasrecept");
+      await page.click('[data-f="kerst"]');
+      check((await page.locator(".recept").count()) === 2 && (await page.locator('[data-f="kerst"][aria-pressed="true"]').count()) === 1, "recepten", "Kerst toont twee recepten");
+      await go(page, ""); check(/Sinterklaas/.test(await page.locator("#h-recept").innerText()), "recepten", "beginscherm noemt Sinterklaas");
+    }
+    await go(page, "recepten"); await page.click('[data-f="alles"]');
+    check((await page.locator(".recept").count()) === 5 && (await page.locator(".recept[open]").count()) === 0, "recepten", "Alles toont vijf recepten, dicht");
+    await page.locator(".recept summary").first().click();
+    check((await page.locator(".recept[open] .recept__zonder").count()) === 1, "recepten", "recept opent met versie zonder alcohol");
+    report(issues, `recepten ${datum}`);
+    await ctx.close();
+  }
+}

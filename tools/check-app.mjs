@@ -1,11 +1,11 @@
 // Browsercontrole: node tools/check-app.mjs   (server moet draaien op http://localhost:4300/, of zet BASE)
 import { fresh, go, report, shot, fail, browser, state } from "./check-setup.mjs";
 import { auditPage } from "./check-lib.mjs";
-import { gateFlow, tasteFlow, giftFlow, collectionFlow } from "./check-flow.mjs";
+import { gateFlow, tasteFlow, giftFlow, collectionFlow, receptenFlow } from "./check-flow.mjs";
 import { adminFlow, motionAndKeyboard, offlineFlow, privacyClaims } from "./check-more.mjs";
 
 const VIEWPORTS = [[390, 844], [768, 1024], [1280, 800]];
-const ROUTES = ["", "smaak", "cadeau", "collectie", "pick", "club", "producten", "product/campari", "product/smirnoff-vodka", "meer", "beheer", "privacy", "over", "rondleiding"];
+const ROUTES = ["", "smaak", "cadeau", "collectie", "pick", "club", "producten", "product/campari", "product/smirnoff-vodka", "meer", "beheer", "privacy", "over", "rondleiding", "recepten"];
 const shots = new Set(["", "smaak", "pick", "product/campari", "club", "producten", "meer", "over"]);
 
 for (const [w, h] of VIEWPORTS) {
@@ -21,7 +21,7 @@ for (const [w, h] of VIEWPORTS) {
   await ctx.close();
 }
 console.log("\n== flows");
-await gateFlow(); await tasteFlow(); await giftFlow(); await collectionFlow(); await adminFlow(); await motionAndKeyboard(); await offlineFlow(); await privacyClaims();
+await gateFlow(); await tasteFlow(); await giftFlow(); await collectionFlow(); await receptenFlow(); await adminFlow(); await motionAndKeyboard(); await offlineFlow(); await privacyClaims();
 await browser.close();
 console.log(state.fails ? `\n${state.fails} probleem/problemen (${state.oks} ok)` : `\nAlles groen (${state.oks} controles)`);
 process.exit(state.fails ? 1 : 0);
