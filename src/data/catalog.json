@@ -252,8 +252,8 @@
       "alcohol": "40%",
       "afbeelding": "public/img/producten/havana-club-3.webp",
       "afbeeldingAlt": "Fles Havana Club 3 Years",
-      "breedte": 114,
-      "hoogte": 400,
+      "breedte": 226,
+      "hoogte": 826,
       "herkomst": "Cuba",
       "smaak": {
         "kruidig": 0.25,
@@ -276,11 +276,11 @@
       "voorraad": null,
       "bron": "concept",
       "credit": {
-        "title": "Havana Club Añejo 3 Años",
-        "creator": "Open Food Facts / product photo contributors",
-        "license": "CC BY-SA",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "sourceUrl": "https://world.openfoodfacts.org/product/8501110081641",
+        "title": "Havana bottles (Havana Club Añejo 3 Años)",
+        "creator": "Knut.C (Wikimedia Commons)",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Havana_bottles.png",
         "changes": "achtergrond verwijderd en bijgesneden"
       }
     },

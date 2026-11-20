@@ -1,6 +1,6 @@
 // Offline-cache: schil, data en afbeeldingen worden vooraf opgehaald; daarna stale-while-revalidate voor same-origin GET.
 // Verhoog VERSION bij elke wijziging aan bestanden, anders blijft een oude cache actief.
-const VERSION = "tasteclub-v5";
+const VERSION = "tasteclub-v6";
 const CORE = [
   "./",
   "index.html",
